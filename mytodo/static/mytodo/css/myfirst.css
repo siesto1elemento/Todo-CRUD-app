@@ -1,0 +1,50 @@
+.heading {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+  color: rgb(83, 78, 78);
+  background-color: aquamarine;
+}
+.button{
+  display: block; /* or inline-block, depending on your layout */
+  margin: auto;
+  margin-bottom: 15px;
+  padding:5px 10px;
+}
+
+
+.container {
+  width: 70%;
+  margin: 0 auto; /* Center the container */
+}
+
+.task-list {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+.task, .date-added, .completed {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 5px;
+}
+
+.task {
+  flex: 1; /* Make the task take up all available space */
+}
+
+.date-added, .completed {
+  flex-basis: 150px; /* Set a fixed width for date added and completed */
+}
+
+.edit_button{
+  padding: 10px 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.delete_button{
+  padding: 10px 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+}

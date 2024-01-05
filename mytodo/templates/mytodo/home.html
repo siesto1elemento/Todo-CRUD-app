@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="{% static 'mytodo/css/myfirst.css' %}">
+</head>
+<body>
+
+<h1 class="heading">TODO App</h1>
+
+<a href="{% url 'add_todo' %}">
+  <button class="button" > Add a todo </button>
+</a>
+{% for x in tasks %}
+
+<div class="container">
+  <div class="task-list">
+    <div class="task">Task:  {{x.task}}</div>
+    <div class="date-added"> Date added : {{x.date_added.date}}</div>
+    <div class="completed">Completed : {{x.completed}}</div>
+    <a href="{% url 'update_todo' x.pk %}">
+      <button class="edit_button" > Update todo </button>
+    </a>
+    <a href="{% url 'delete_todo' x.pk %}">
+      <button class="delete_button" > Delete todo </button>
+    </a>
+  </div>
+</div>
+
+
+{% endfor %}
+
+</body>
+</html>
